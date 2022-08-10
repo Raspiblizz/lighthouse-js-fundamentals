@@ -6,18 +6,52 @@ The function returns one of the following strings, based on the value of age:
 Secondary School if age is between 13 and 18 (both inclusive)
 Lighthouse Labs in all other cases. */
 
+
+let age = ""
+
+
+console.log(whichSchool(10))
+
+let age = ""
+const whichSchool = function (age) {
+ 
+}
+
+console.log("I am 35. Which school should I go to?");
+console.log(whichSchool(35));
+console.log("I am 8. Which school should I go to?");
+console.log(whichSchool(8));
+console.log("I am 14. Which school should I go to?");
+console.log(whichSchool(14));
+
+
+let age = ""
 const whichSchool  = function (age) {
-  if (age < 13) { 
-    console.log('Elementary School')
+  if (age < 13) {
+    return 'Elementary School';
    } else if (age => 13 && age <= 18) {
-    console.log('Secondary School')
+    return 'Secondary School';
   } else { 
-    console.log('LightHouse Labs')
+    return 'LightHouse Labs';
   } 
+}
 
-console.log(whichSchool(19));
+console.log(whichSchool(10))
 
 
+
+
+const whichSchool  = function (age) {
+  for (i = 13; i < 18; i++) {
+  expect(whichSchool(i)).to.be.equal("Secondary School");
+ }
+  for (i = 19; i < 100; i++) {
+  expect(whichSchool(i)).to.be.equal("Lighthouse Labs");
+}
+  for (i = 1; i < 12; i++) {
+  expect(whichSchool(i)).to.be.equal("Elementary School");
+ }
+}
 
 
 /* (fruit.length > 5)
