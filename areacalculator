@@ -1,0 +1,44 @@
+
+function calculateRectangleArea(length, width) {
+  if (Math.sign(length) > 0 , Math.sign(width) > 0) {
+    let rectangleArea = length * width; 
+    return rectangleArea
+  } else { 
+    console.log("undefined");
+  }  
+}
+
+function calculateTriangleArea(base, height) {
+  if (Math.sign(base) > 0 , Math.sign(height) > 0) {
+    let triangleArea = base * height / 2 ; 
+    return triangleArea
+  } else { 
+    console.log("undefined");
+  }  
+}
+
+function calculateCircleArea(radius) {
+  const pie = Math.PI
+  if (Math.sign(radius) > 0) {
+    let circleRadius = radius * radius; 
+    let circleArea = circleRadius * pie;
+    return circleArea
+  } else { 
+    console.log("undefined");
+  }  
+}
+console.log(calculateCircleArea(-1)); 
+
+
+// should print undefined
+console.log(calculateRectangleArea(10, 5));     // should print 50
+console.log(calculateRectangleArea(1.5, 2.5));  // should print 3.75
+console.log(calculateRectangleArea(10, -5));    // should print undefined
+
+console.log(calculateTriangleArea(10, 5)); // should print 25
+console.log(calculateTriangleArea(3, 2.5)); // should print 3.75
+console.log(calculateTriangleArea(10, -5)); // should print undefined
+
+console.log(calculateCircleArea(10)); // should print 314.159...
+console.log(calculateCircleArea(3.5)); // should print 38.484...
+console.log(calculateCircleArea(-1)); // should print undefined
